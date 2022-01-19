@@ -1,57 +1,68 @@
-//console.log("hey, I am in an external file")
+//console.log("hey, I am an external file")
 
-const doc = document.documentElement;
-//console.log(doc)
+const doc = document.documentElement //loading your html doc in js to modify it
+//console.log(doc);
 
 doc.style.fontFamily = "monospace";
-doc.style.background = "lightgrey"
-doc.style.color = "white" 
+doc.style.background = "lightgray"
+doc.style.color = "white"
 
-//access elements from the doc
-const titlebar =  document.querySelector("#child-1");
-//console.log(titlebar.innerHTML);
-titlebar.innerHTML = "This is my website's titlebar" ;
+
+//ACCESS ELEMENTS FROM THE DOC
+
+const titlebar = document.documentElement.querySelector("#child-1")
+//This allows you to chose an element within the html
+//and reference it as a constant you can play with
+//Not necessary to write the documentElement part in this case.
+
+console.log(titlebar); //gets the full code
+console.log(titlebar.innerHTML); //gets what's inside the code, text in the console
+
+//changes the actual title!!!
+titlebar.innerHTML = "This is my website's titlebar";
 titlebar.style.fontSize = "20px";
 
 //add elements into the site
+//appendChild gets things into the website
 let resetButton = document.createElement("button");
-titlebar.appendChild(resetButton);
-resetButton.innerHTML = "Reset Button";
-resetButton.style.float = "right";
+titlebar.appendChild(resetButton); //place the button in the text box
+resetButton.innerHTML = "Reset Button"; //naming the button
+resetButton.style.float = "right"; //placing the button
 
-//assign an event to my button
+//assign an event (functionality) to my button
 resetButton.addEventListener("click", doSomething);
 
 function doSomething(){
-    console.log("button has been pressed");
+    console.log("button has been pressed")
+
 }
 
-const mainText = document.querySelector("p");
-mainText.innerHTML = "" 
+const mainText = document.querySelector("p")
+//This allows you to chose an element within the html
+mainText.innerHTML = ""
 
+//re-calling the child-2 box as sidebar for future coding
 const sidebar = document.querySelector("#child-2");
 
-//create a form (user input) to fill the paragraph
-let input = document.createElement("input");
+//CREATE A FORM (user input) TO FILL THE PARAGRAPH
+//WHAT'S WRITTEN AND SUBMITTED IN BLUE BOX SHOWS IN GREEN BOX
+let input = document.createElement("input"); //type of element created
 
 sidebar.appendChild(input);
-sidebar.append()
+//placing newly created input in sidebar (former child-2)
 
+//Create button for submission
 let submitButton = document.createElement("button");
-submitButton.innerHTML = "Submit";
-sidebar.appendChild(submitButton);
+submitButton.innerHTML = "Submit"; //text in button
+sidebar.appendChild(submitButton); //place button in sidebar
 
-let val = submitButton.addEventListener('click', submitText);
+//making the button act over the written text
+let val = submitButton.addEventListener("click", submitText);
 
+//function to place the text inthe green box - not sure how it works
 function submitText(){
     let inputText = input.value;
-    console.log(inputText);
     mainText.innerHTML += inputText + " ";
     input.value = "";
-};
 
-
-
-
-
-
+}

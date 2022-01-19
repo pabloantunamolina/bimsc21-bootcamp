@@ -9,29 +9,47 @@ border-color: red;
 border-style:dotted;
 border-radius: 5px;
 height: 50px;
-box-sizing: border-box;
 
-padding: 5px;
+box-sizing: border-box; /*Pushes the text boxes to the borders of the site*/
+
+padding: 5px; /*Minimum space around the element*/
+/*margin: 5px; /*Margin around all sides of the element with other
+elements and the browsers edge*/
+
 }
 
 #child-2 {
-    border: 2px dotted blue ;
-    border-radius: 5px;
-    height: 50px;
-    width: 30%;
-    box-sizing: border-box;
-    float: left;
-    padding: 5px;
+border: 2px;
+border-color: blue;
+border-style:dotted;
+border-radius: 5px;
+height: 50px;
 
+width: 30%; /* This scales the width of the container*/
+box-sizing: border-box; /*Pushes the text boxes to the borders of the site*/
+float: left; /*Pushes the text box to the left edge of the site*/
+
+padding: 5px; /*Minimum space around the element*/
+/*margin: 5px; /*Margin around all sides of the element with other
+elements and the browsers edge. When two things are in the same row but the
+margin makes them collide, the second one will be sent downwards*/
+    
 }
 
 #child-3 {
-    border: 2px dotted green ;
-    border-radius: 5px;
-    height: 50px;
-    width: 70%;
-    box-sizing: border-box;
-    float: right;
-    padding: 5px;
+border: 2px;
+border-color: green;
+border-style:dotted;
+border-radius: 5px;
+height: 50px;
 
-    }
+width: 70%; /* This scales the width of the container*/
+box-sizing: border-box; /*Pushes the text boxes to the borders of the site*/
+float: right; /*Pushes the text box to the right edge of the site*/
+
+padding: 5px; /*Minimum space around the element*/
+/*margin: 5px; /*Margin around all sides of the element with other
+elements and the browsers edge. When two things are in the same row but the
+margin makes them collide, the second one will be sent downwards*/
+    
+}
